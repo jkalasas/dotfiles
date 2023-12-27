@@ -2,6 +2,7 @@
   imports = [
     hyprland.homeManagerModules.default
     ./programs
+    ./scripts
   ];
 
   home = {
@@ -11,6 +12,9 @@
 
   home.packages = with pkgs; [
     pfetch
+
+    # misc
+    rofi
   ];
 
   programs.home-manager.enable = true;

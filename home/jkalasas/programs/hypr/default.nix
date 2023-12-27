@@ -28,9 +28,12 @@
       "$mod SHIFT, X, killactive"
       "$mod, mouse_down, workspace, e+1"
       "$mod, mouse_up, workspace, e-1"
+      "$mod, F, fullscreen"
       "$mod, T, toggleFloating"
-      "$mod, B, exec, $browser"
+
       "$mod, RETURN, exec, $terminal"
+      "$mod, B, exec, $browser"
+      "$mod, P, exec, rofiWindow"
 
       # window navigation
       "$mod, left, movefocus, l"
@@ -81,5 +84,9 @@
       workspace_swipe = true;
       workspace_swipe_fingers = 4;
     };
+
+    windowrule = [
+      "float,^(pavucontrol)"
+    ];
   };
 }
