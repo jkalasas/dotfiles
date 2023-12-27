@@ -3,6 +3,7 @@
     hyprland.homeManagerModules.default
     ./programs
     ./scripts
+    ./themes
   ];
 
   home = {
@@ -10,13 +11,36 @@
     homeDirectory = "/home/jkalasas";
   };
 
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     pfetch
 
     # misc
+    bibata-cursors
+    btop
+    eza
+    grim
     rofi
+    slurp
+    tty-clock
+    tokyo-night-gtk
+    wl-clipboard
     wofi
-  ];
+  ]) ++ (with pkgs.gnome; [
+    nautilus
+    zenity
+    gnome-tweaks
+    eog
+  ]);
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+
+    "org/gnome/shell/extensions/user-theme" = {
+      name = "Tokyonight-Dark-B-LB";
+    };
+  };
 
   programs.home-manager.enable = true;
 
