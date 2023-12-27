@@ -47,6 +47,7 @@
     enable = true;
     layout = "us";
     xkbVariant = "";
+    displayManager.lightdm.enable = false;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -75,6 +76,7 @@
     # misc
     curl
     git
+    pavucontrol
     wget
   ];
 
