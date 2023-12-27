@@ -95,6 +95,12 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  hardware.opengl.extraPackages = with pkgs; [
+    intel-media-driver
+  ];
+
   networking.nameservers = [
     "1.1.1.1" "1.0.0.1"
   ];
