@@ -15,6 +15,7 @@
 
     # misc
     rofi
+    wofi
   ];
 
   programs.home-manager.enable = true;
