@@ -1,9 +1,8 @@
 { configs, hyprland, pkgs, ... }: {
   imports = [
     hyprland.homeManagerModules.default
+    ./programs
   ];
-
-  programs.home-manager.enable = true;
 
   home = {
     username = "jkalasas";
@@ -13,6 +12,8 @@
   home.packages = with pkgs; [
     pfetch
   ];
+
+  programs.home-manager.enable = true;
 
   home.stateVersion = "23.11";
 }

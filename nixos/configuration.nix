@@ -44,6 +44,7 @@
 
   # Configure keymap in X11
   services.xserver = {
+    enable = true;
     layout = "us";
     xkbVariant = "";
   };
@@ -71,7 +72,7 @@
     # terminal
     alacritty
 
-    # utils
+    # misc
     curl
     git
     wget
