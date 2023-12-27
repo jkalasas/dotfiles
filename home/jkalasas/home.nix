@@ -1,4 +1,8 @@
-{ configs, pkgs, ... }: {
+{ configs, hyprland, pkgs, ... }: {
+  imports = [
+    hyprland.homeManagerModules.default
+  ];
+
   programs.home-manager.enable = true;
 
   home = {

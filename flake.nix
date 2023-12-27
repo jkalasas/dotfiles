@@ -5,8 +5,9 @@
      url = "github:nix-community/home-manager/release-23.11";
      inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
   };
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
   let 
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -15,15 +16,18 @@
     };
     lib = nixpkgs.lib;
   in {
-    nixosConfigurations.nixos = lib.nixosSystem {
+    nixosConfigurations.nixos = lib.nixosSystem rec {
       inherit system;
+      specialArgs = { inherit hyprland; };
       modules = [ 
 	./nixos/configuration.nix 
+	hyprland.nixosModules.default
 	home-manager.nixosModules.home-manager
 	{
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
 	  home-manager.users.jkalasas = import ./home/jkalasas/home.nix;
+	  home-manager.extraSpecialArgs = specialArgs;
 	}
       ];
     };
