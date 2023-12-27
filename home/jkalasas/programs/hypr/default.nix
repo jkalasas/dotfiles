@@ -15,6 +15,15 @@
     "$browser" = "firefox";
     "$terminal" = "alacritty";
     bind = [
+      ",XF86AudioMicMute,exec,pamixer --default-source -t"
+      ",XF86MonBrightnessDown,exec,light -U 20"
+      ",XF86MonBrightnessUp,exec,light -A 20"
+      ",XF86AudioMute,exec,pamixer -t"
+      ",XF86AudioLowerVolume,exec,pamixer -d 10"
+      ",XF86AudioRaiseVolume,exec,pamixer -i 10"
+      ",XF86AudioPlay,exec,playerctl play-pause"
+      ",XF86AudioPause,exec,playerctl play-pause"
+
       "$mod SHIFT, Q, exit"
       "$mod SHIFT, X, killactive"
       "$mod, mouse_down, workspace, e+1"

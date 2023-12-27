@@ -76,7 +76,10 @@
     # misc
     curl
     git
+    light
+    pamixer
     pavucontrol
+    playerctl
     wget
   ];
 
