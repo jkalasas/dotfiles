@@ -1,5 +1,6 @@
 {
   imports = [
+    ./alacritty
     ./hypr
     ./rofi
     ./waybar

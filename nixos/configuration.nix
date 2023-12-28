@@ -71,9 +71,6 @@
     #editors
     neovim
 
-    # terminal
-    alacritty
-
     # misc
     curl
     git
