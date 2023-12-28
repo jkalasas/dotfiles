@@ -80,6 +80,7 @@
     pavucontrol
     playerctl
     wget
+    xdg-user-dirs
   ];
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -139,6 +140,11 @@
   networking.nameservers = [
     "1.1.1.1" "1.0.0.1"
   ];
+
+  fileSystems."/run/media/Linuxuu" = {
+    device = "/dev/disk/by-uuid/c24c4bff-581c-469c-8f35-ffac27145555";
+    fsType = "ext4";
+  };
 
   programs.dconf.enable = true;
 }
