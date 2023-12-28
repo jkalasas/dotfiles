@@ -11,10 +11,10 @@ let
 
     # Options
     if [[ "$DIR" == "powermenus" ]]; then
-    	shutdown=""
-    	reboot=""
-    	lock=""
-    	suspend=""
+    	shutdown="⏻"
+    	reboot="󰜉"
+    	lock=""
+    	suspend="󰤄"
     	ddir="$rofi_conf_dir"
     else
 
@@ -25,10 +25,10 @@ let
     	if [[ "$layout" == "TRUE" ]]; then
       # Section 1
 
-    		shutdown=""
-    		reboot=""
-    		lock=""
-    		suspend=""
+    		shutdown="⏻"
+    		reboot="󰜉"
+    		lock=""
+    		suspend="󰤄"
       # Section 2
     #		shutdown="襤"
     #		reboot="ﰇ"
@@ -39,10 +39,10 @@ let
 
     	else
       # Section 1
-    		shutdown=" Shutdown"
-    		reboot=" Restart"
-    		lock=" Lock"
-    		suspend=" Sleep"
+    		shutdown="⏻ Shutdown"
+    		reboot="󰜉 Restart"
+    		lock=" Lock"
+    		suspend="󰤄 Sleep"
       # Section 2
     #		shutdown="襤Shutdown"
     #		reboot="ﰇ Restart"
