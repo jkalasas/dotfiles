@@ -2,7 +2,8 @@
 let
   screenshot = pkgs.writeShellScriptBin "screenshot" ''
     #!/usr/bin/env bash
-    rofi_command="rofi -theme $HOME/.config/rofi/screenshot.rasi"
+    rasi_config="$HOME/.config/rofi/screenshot.rasi"
+    rofi_command="rofi -theme $rasi_config"
 
     time=`date +%Y-%m-%d-%I-%M-%S`
     geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
@@ -10,7 +11,7 @@ let
     file="Screenshot_''${time}_''${geometry}.png"
 
     # Buttons
-    layout=`cat $HOME/.config/rofi/config/screenshot.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
+    layout=`cat $rasi_config | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
     if [[ "$layout" == "TRUE" ]]; then
     	screen=""
     	area=""
