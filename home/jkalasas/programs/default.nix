@@ -5,6 +5,7 @@
     ./hypr
     ./nvim
     ./rofi
+    ./tmux
     ./waybar
     ./zsh
   ];
