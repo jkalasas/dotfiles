@@ -111,6 +111,7 @@
        }
 
        vim-nix
+       vim-tmux-navigator
 	 ];
 
      extraLuaConfig = getFile ./config/options.lua;

@@ -1,4 +1,4 @@
-{ configs, pkgs }:
+{ configs, pkgs, ... }:
 {
   programs.tmux = {
     enable = true;
@@ -8,7 +8,6 @@
       vim-tmux-navigator
       yank
     ];
-
     extraConfig = ''
     set-option -sa terminal-overrides ",xterm*:Tc"
     set -g mouse on
@@ -38,7 +37,7 @@
     bind % split-window -h -c "#{pane_current_path}"
 
     # zsh default shell
-    set-option -g default-shell /bin/zsh
+    set-option -g default-shell ${pkgs.zsh}/bin/zsh
     '';
   };
 }
