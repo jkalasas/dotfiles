@@ -10,7 +10,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-networking.hostName = "devtop";
+  networking.hostName = "devtop";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Asia/Manila";
