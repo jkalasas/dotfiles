@@ -13,7 +13,7 @@ let
     	-terminal alacritty \
     	-theme "$HOME"/.config/rofi/launcher.rasi
   '';
-  wallpaper-init = pkgs.writeShellScriptBin "wallpaper-init" ''
+  wallpaper-set = pkgs.writeShellScriptBin "wallpaper-set" ''
     #!/usr/bin/env bash
     swww img ${config.xdg.configHome}/scripts/wallpapers/animated-city.gif
   '';
@@ -31,6 +31,6 @@ in
 
     # scripts
     rofi-launcher
-    wallpaper-init
+    wallpaper-set
   ];
 }

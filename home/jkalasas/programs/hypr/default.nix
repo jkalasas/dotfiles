@@ -75,7 +75,11 @@
 
     exec-once = [
       "nm-applet"
-      "wallpaper-init"
+      "swww init"
+    ];
+
+    exec = [
+      "wallpaper-set"
     ];
 
     input.kb_layout = "us";
