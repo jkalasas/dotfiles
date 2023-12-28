@@ -12,10 +12,14 @@
   };
 
   home.packages = (with pkgs; [
+    # dev stuff
+    corepack_21
+    nodejs_21
+    python3
+    python311Packages.pip
+
     # user
     telegram-desktop
-
-    pfetch
 
     # misc
     archiver
@@ -24,6 +28,7 @@
     eza
     grim
     networkmanagerapplet
+    pfetch
     rofi
     slurp
     tty-clock
