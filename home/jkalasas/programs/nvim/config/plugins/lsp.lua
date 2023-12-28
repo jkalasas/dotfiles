@@ -42,6 +42,9 @@ require('lspconfig').lua_ls.setup {
     }
 }
 
+require('lspconfig').pyright.setup{}
+require('lspconfig').tsserver.setup{}
+
 require('lspconfig').rnix.setup {
     on_attach = on_attach,
     capabilities = capabilities,

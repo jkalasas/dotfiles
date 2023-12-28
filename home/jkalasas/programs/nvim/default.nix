@@ -12,9 +12,17 @@
      vimdiffAlias = true;
 
      extraPackages = with pkgs; [
+       # language servers
+       nodePackages.pyright
+       typescript
+       nodePackages.typescript-language-server
        lua-language-server
+       luajitPackages.lua-lsp
+
        rnix-lsp
 
+       fd
+       ripgrep
        xclip
        wl-clipboard
      ];
@@ -63,7 +71,7 @@
            p.tree-sitter-lua
            p.tree-sitter-python
            p.tree-sitter-json
-         ]);
+         ]));
          type = "lua";
          config = getFile ./config/plugins/treesitter.lua;
        }
