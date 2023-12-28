@@ -76,6 +76,7 @@
     # misc
     curl
     git
+    gnome.adwaita-icon-theme
     light
     pamixer
     pavucontrol
@@ -137,4 +138,6 @@
   networking.nameservers = [
     "1.1.1.1" "1.0.0.1"
   ];
+
+  programs.dconf.enable = true;
 }
