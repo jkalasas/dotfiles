@@ -102,6 +102,7 @@
 
     windowrule = [
       "float,^(pavucontrol)"
+      "center,^(pavucontrol)"
     ];
   };
 }
