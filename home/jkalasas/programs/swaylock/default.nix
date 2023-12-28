@@ -3,6 +3,8 @@
   programs.swaylock = {
     enable = true;
     settings = {
+      ignore-empty-password = true;
+      font = "JetBrainsMono Nerd Font";
       color = "24273a";
       bs-hl-color = "f4dbd6";
       caps-lock-bs-hl-color = "f4dbd6";

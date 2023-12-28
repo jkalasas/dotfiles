@@ -16,6 +16,12 @@
 
   programs.dconf.enable = true;
 
+  security.pam.services.swaylock = {
+    text = ''
+      auto include login
+    '';
+  };
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;

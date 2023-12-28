@@ -5,6 +5,11 @@
     ./hyprland-environment.nix
   ];
 
+  home.packages = with pkgs; [
+    imagemagick
+    swayidle
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -13,6 +18,8 @@
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     "$browser" = "firefox";
+    "$lockfile" = "~/.cache/lockscreen.png";
+    "$lockcommand" = "grim $lockfile; convert $lockfile -blur 0x4 $lockfile; swaylock --image $lockfile";
     "$launcher" = "rofi-launcher";
     "$terminal" = "alacritty";
     bind = [
@@ -68,6 +75,9 @@
         )
         10)
     );
+    bindl = [
+      ",switch:Lid Switch, exec, $lockcommand"
+    ];
     bindm = [
       "$mod, mouse:272, movewindow"
       "$mod, mouse:273, resizewindow"
@@ -76,6 +86,7 @@
     exec-once = [
       "nm-applet"
       "swww init"
+      "swayidle -w timeout 1200 \"$lockcommand\" timeout 1800 \"hyprctl dispatch dpms off\" resume \"hyprctl dispatch dpms on\""
     ];
 
     exec = [
