@@ -15,6 +15,8 @@ rofi \
   '';
 in
 {
+  imports = [ ./screenshot.nix ];
+
   home.packages = with pkgs; [
     rofi-launcher
   ];
