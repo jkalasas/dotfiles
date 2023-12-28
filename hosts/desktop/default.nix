@@ -14,6 +14,13 @@
       };
     };
   };
+  services.xserver.displayManager.session = [
+    {
+      manage = "desktop";
+      name = "Hyprland";
+      start = "/etc/profiles/per-user/jkalasas/bin/Hyprland";
+    }
+  ];
 
   programs = {
     bash = {
@@ -30,5 +37,6 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
+    config.common.default = "*";
   };
 }
