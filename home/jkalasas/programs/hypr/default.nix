@@ -67,6 +67,10 @@
       "$mod, mouse:273, resizewindow"
     ];
 
+    exec-once = [
+      "nm-applet"
+    ];
+
     input.kb_layout = "us";
     input.touchpad = {
       natural_scroll = true;

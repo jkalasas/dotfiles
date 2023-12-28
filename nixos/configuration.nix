@@ -83,6 +83,9 @@
     playerctl
     wget
   ];
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
 
   # sound
   sound.enable = true;

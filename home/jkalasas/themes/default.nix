@@ -8,9 +8,18 @@
       package = pkgs.yaru-theme;
     };
 
+#    theme = {
+#      name = "Tokyonight-Dark-B-LB";
+#      package = pkgs.tokyo-night-gtk;
+#    };
     theme = {
-      name = "Tokyonight-Dark-B-LB";
-      package = pkgs.tokyo-night-gtk;
+      name = "Catppuccin-Macchiato-Compact-Lavender-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "lavender" ];
+	size = "compact";
+	tweaks = [ "rimless" "black" ];
+	variant = "macchiato";
+      };
     };
 
     cursorTheme = {

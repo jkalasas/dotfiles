@@ -12,6 +12,9 @@
   };
 
   home.packages = (with pkgs; [
+    # user
+    telegram-desktop
+
     pfetch
 
     # misc
@@ -19,6 +22,7 @@
     btop
     eza
     grim
+    networkmanagerapplet
     rofi
     slurp
     tty-clock
@@ -38,7 +42,7 @@
     };
 
     "org/gnome/shell/extensions/user-theme" = {
-      name = "Tokyonight-Dark-B-LB";
+      name = "Catppuccin-Macchiato-Compact-Lavender-Dark";
     };
   };
 

@@ -1,16 +1,14 @@
-{ config, lib, pkgs }:
+{ config, lib, pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
-    systemd = {
-      enable = true;
+    systemd = { enable = true;
       target = "graphical-session.target";
     };
     style = ''
                * {
                  font-family: "JetBrainsMono Nerd Font";
-                 font-size: 12pt;
-                 font-weight: bold;
+                 font-size: 10pt; font-weight: bold;
                  border-radius: 8px;
                  transition-property: background-color;
                  transition-duration: 0.5s;
@@ -139,10 +137,10 @@
         "layer" = "top";
         "position" = "top";
         modules-left = [
-          "custom/launcher"
-          "temperature"
-          "mpd"
-          "custom/cava-internal"
+#          "custom/launcher"
+#          "temperature"
+#          "mpd"
+#          "custom/cava-internal"
         ];
         modules-center = [
           "clock"
@@ -150,10 +148,10 @@
         modules-right = [
           "pulseaudio"
           "backlight"
-          "memory"
-          "cpu"
-          "network"
-          "custom/powermenu"
+#          "memory"
+#          "cpu"
+#          "network"
+#          "custom/powermenu"
           "tray"
         ];
         "custom/launcher" = {
@@ -179,7 +177,7 @@
         };
         "clock" = {
           "interval" = 1;
-          "format" = "{:%I:%M %p  %A %b %d}";
+          "format" = "{:%I:%M %d/%m}";
           "tooltip" = true;
           "tooltip-format"= "{=%A; %d %B %Y}\n<tt>{calendar}</tt>";
         };
@@ -227,5 +225,4 @@
         };
       }];
     };
-  };
 }
