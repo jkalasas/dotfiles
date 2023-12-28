@@ -5,8 +5,8 @@
     terminal = "alacritty";
   };
 
-    home.file."${config.xdg.configHome}/rofi" = {
-      source = ./configs;
-      recursive = true;
-    };
+  home.file."${config.xdg.configHome}/rofi" = {
+    source = ./configs;
+    recursive = true;
+  };
 }

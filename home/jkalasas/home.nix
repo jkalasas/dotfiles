@@ -31,14 +31,12 @@
     grim
     networkmanagerapplet
     pfetch
-    rofi
     slurp
     tty-clock
     unrar
     unzip
     tokyo-night-gtk
     wl-clipboard
-    wofi
     xfce.thunar
   ]) ++ (with pkgs.gnome; [
     file-roller
