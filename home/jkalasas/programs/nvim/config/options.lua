@@ -41,6 +41,11 @@ local M = {
 		['<tab>'] = '<cmd> bnext <CR>',
 		['<S-tab>'] = '<cmd> bprevious <CR>',
 
+		-- formatter
+		['<leader>fm'] = function()
+			vim.lsp.buf.format { async = true };
+        end,
+
 		-- nvim-tree
 		['<C-n>'] = '<cmd> NvimTreeToggle <CR>',
 		['<leader>e'] = '<cmd> NvimTreeFocus <CR>',
