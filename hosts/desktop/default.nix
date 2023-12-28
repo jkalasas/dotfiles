@@ -1,5 +1,9 @@
 { config, lib, pkgs, ... }:
 {
+  imports = [
+    ./virtualization
+  ];
+
   programs.regreet.enable = true;
   services.greetd = {
     enable = true;
