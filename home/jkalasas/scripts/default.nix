@@ -19,7 +19,10 @@ let
   '';
 in
 {
-  imports = [ ./screenshot.nix ];
+  imports = [ 
+    ./powermenu.nix
+    ./screenshot.nix 
+  ];
 
   home.file."${config.xdg.configHome}/scripts/wallpapers" = {
     source = ./wallpapers;
