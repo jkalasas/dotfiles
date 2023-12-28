@@ -27,6 +27,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require('neodev').setup()
+
+require('lspconfig').emmet_ls.setup{}
 require('lspconfig').lua_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
@@ -41,8 +43,9 @@ require('lspconfig').lua_ls.setup {
         },
     }
 }
-
 require('lspconfig').pyright.setup{}
+require('lspconfig').svelte.setup{}
+require('lspconfig').tailwindcss.setup{}
 require('lspconfig').tsserver.setup{}
 
 require('lspconfig').rnix.setup {

@@ -13,18 +13,22 @@
 
      extraPackages = with pkgs; [
        # language servers
+       emmet-ls
        nodePackages.pyright
        typescript
+       nodePackages.svelte-language-server
        nodePackages.typescript-language-server
        lua-language-server
        luajitPackages.lua-lsp
+       tailwindcss-language-server
 
        # formatters
        black
+       prettierd
        stylua
 
        # linters
-       nodePackages.eslint
+       eslint_d
 
        rnix-lsp
 
