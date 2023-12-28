@@ -14,6 +14,7 @@
   home.packages = (with pkgs; [
     # dev stuff
     corepack_21
+    lazygit
     nodejs_21
     python3
     python311Packages.pip
