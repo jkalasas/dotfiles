@@ -50,12 +50,13 @@
     displayManager.lightdm.enable = false;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  programs.zsh.enable = true;
   users.users.jkalasas = {
     isNormalUser = true;
     description = "Kyle";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
