@@ -38,6 +38,7 @@ local M = {
 		-- buffers
 		['<leader>t'] = '<cmd> enew <CR>',
 		['<leader>w'] = '<cmd> bd <CR>',
+		['<leader>x'] = '<cmd> bd <CR>',
 		['<tab>'] = '<cmd> bnext <CR>',
 		['<S-tab>'] = '<cmd> bprevious <CR>',
 
