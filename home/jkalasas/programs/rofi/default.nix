@@ -6,7 +6,7 @@
   };
 
     home.file."${config.xdg.configHome}/rofi" = {
-      source = "./configs";
+      source = ./configs;
       recursive = true;
     };
 }
