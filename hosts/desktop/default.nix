@@ -5,15 +5,7 @@
   ];
 
   programs.regreet.enable = true;
-  services.greetd = {
-    enable = true;
-    settings = {
-      initial_session = {
-        user = "jkalasas";
-	command = "$SHELL -l";
-      };
-    };
-  };
+  services.greetd.enable = true;
   services.xserver.displayManager.session = [
     {
       manage = "desktop";
@@ -21,16 +13,6 @@
       start = "/etc/profiles/per-user/jkalasas/bin/Hyprland";
     }
   ];
-
-  programs = {
-    bash = {
-      interactiveShellInit = ''
-        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-           Hyprland        
-	fi
-      '';
-    };
-  };
 
   programs.dconf.enable = true;
 

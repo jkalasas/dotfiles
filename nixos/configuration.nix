@@ -64,6 +64,7 @@
     xdg-user-dirs
   ];
   fonts.packages = with pkgs; [
+    noto-fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
