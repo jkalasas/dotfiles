@@ -19,6 +19,13 @@
        lua-language-server
        luajitPackages.lua-lsp
 
+       # formatters
+       black
+       stylua
+
+       # linters
+       nodePackages.eslint
+
        rnix-lsp
 
        fd
@@ -66,6 +73,12 @@
        }
 
        neodev-nvim
+
+       {
+         plugin = null-ls-nvim;
+         type = "lua";
+         config = getFile ./config/plugins/null-ls.lua;
+       }
 
        {
          plugin = nvim-tree-lua;
