@@ -13,6 +13,7 @@
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     "$browser" = "firefox";
+    "$launcher" = "rofi-launcher";
     "$terminal" = "alacritty";
     bind = [
       ",XF86AudioMicMute,exec,pamixer --default-source -t"
@@ -33,7 +34,7 @@
 
       "$mod, RETURN, exec, $terminal"
       "$mod, B, exec, $browser"
-      "$mod, P, exec, rofiWindow"
+      "$mod, P, exec, $launcher"
 
       # window navigation
       "$mod, left, movefocus, l"

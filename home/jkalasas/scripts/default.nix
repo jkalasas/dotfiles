@@ -14,6 +14,19 @@ rofi \
     -show drun \
     -theme "$HOME/.config/rofi/theme.rasi"
   '';
+  rofi-launcher = pkgs.writeShellScriptBin "rofi-launcher" ''
+#!/usr/bin/env bash
+rofi \
+	-show drun \
+	-modi run,drun,ssh \
+	-scroll-method 0 \
+	-drun-match-fields all \
+	-drun-display-format "{name}" \
+	-no-drun-show-actions \
+	-terminal kitty \
+	-kb-cancel Alt-F1 \
+	-theme "$HOME"/.config/rofi/config/launcher.rasi
+  '';
   wallpaper_random = pkgs.writeShellScriptBin "wallpaper_random" ''
     if command -v swww >/dev/null 2>&1; then 
         killall dynamic_wallpaper
