@@ -2,12 +2,12 @@
 let
   screenshot = pkgs.writeShellScriptBin "screenshot" ''
     #!/usr/bin/env bash
-    rofi_command="rofi -theme $HOME/.config/rofi/config/screenshot.rasi"
+    rofi_command="rofi -theme $HOME/.config/rofi/screenshot.rasi"
 
     time=`date +%Y-%m-%d-%I-%M-%S`
     geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
     dir="`xdg-user-dir PICTURES`/Screenshots"
-    file="Screenshot_${time}_${geometry}.png"
+    file="Screenshot_''${time}_''${geometry}.png"
 
     # Buttons
     layout=`cat $HOME/.config/rofi/config/screenshot.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
@@ -28,7 +28,7 @@ let
     # Notify and view screenshot
     notify_view () {
     	dunstify -u low --replace=699 "Copied to clipboard."
-    	eog ${dir}/"$file"
+    	eog ''${dir}/"$file"
     	if [[ -e "$dir/$file" ]]; then
     		dunstify -u low --replace=699 "Screenshot Saved."
     	else
@@ -46,29 +46,29 @@ let
 
     # take shots
     shotnow () {
-    	cd ${dir} && sleep 0.5 && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
+    	cd ''${dir} && sleep 0.5 && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
     	notify_view
     }
 
     shot5 () {
     	countdown '3'
-    	sleep 1 && cd ${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
+    	sleep 1 && cd ''${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
     	notify_view
     }
 
     shot10 () {
     	countdown '10'
-    	sleep 1 && cd ${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
+    	sleep 1 && cd ''${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
     	notify_view
     }
 
     shotwin () {
-    	cd ${dir} && maim -u -f png -i `xdotool getactivewindow` | tee "$file" | xclip -selection clipboard -t image/png
+    	cd ''${dir} && maim -u -f png -i `xdotool getactivewindow` | tee "$file" | xclip -selection clipboard -t image/png
     	notify_view
     }
 
     shotarea () {
-    	cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | tee "$file" | xclip -selection clipboard -t image/png
+    	cd ''${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | tee "$file" | xclip -selection clipboard -t image/png
     	notify_view
     }
 
