@@ -3,5 +3,6 @@
     ./hypr
     ./rofi
     ./waybar
+    ./zsh
   ];
 }
