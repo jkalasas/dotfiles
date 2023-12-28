@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 {
-  programs.neovim = {
+  programs.neovim = 
+  let
+    getFile = file: "${builtins.readFile file}";
+  in
+  {
     enable = true;
 
      viAlias = true;
@@ -15,7 +19,12 @@
        wl-clipboard
      ];
 
-	 plugins = with pkgs.vimPlugins; [
+     plugins = with pkgs.vimPlugins; [
+       {
+         plugin = catppuccin-nvim;
+         type = "lua";
+         config = getFile ./config/plugins/catppuccin.lua;
+       }
 	   {
 	     plugin = comment-nvim;
 		 type = "lua";
@@ -24,15 +33,13 @@
 	   {
 	     plugin = telescope-nvim;
 		 type = "lua";
-		 config = "${builtins.readFile ./config/plugins/telescope.lua}";
+		 config = getFile ./config/plugins/telescope.lua};
 	   }
 	   telescope-fzf-native-nvim
 	   vim-nix
 	 ];
 
-     extraLuaConfig = ''
-       ${builtins.readFile ./config/options.lua}
-     '';
+     extraLuaConfig = getFile ./config/options.lua;
   };
 }
 
