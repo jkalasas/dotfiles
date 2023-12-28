@@ -29,8 +29,8 @@
     tokyo-night-gtk
     wl-clipboard
     wofi
+    xfce.thunar
   ]) ++ (with pkgs.gnome; [
-    nautilus
     zenity
     gnome-tweaks
     eog
