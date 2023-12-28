@@ -24,6 +24,7 @@
     # misc
     archiver
     bibata-cursors
+    brightnessctl
     btop
     eza
     grim
