@@ -18,6 +18,7 @@
     pfetch
 
     # misc
+    archiver
     bibata-cursors
     btop
     eza
@@ -26,11 +27,14 @@
     rofi
     slurp
     tty-clock
+    unrar
+    unzip
     tokyo-night-gtk
     wl-clipboard
     wofi
     xfce.thunar
   ]) ++ (with pkgs.gnome; [
+    file-roller
     zenity
     gnome-tweaks
     eog

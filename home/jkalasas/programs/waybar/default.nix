@@ -148,6 +148,7 @@
         modules-right = [
           "pulseaudio"
           "backlight"
+	  "battery"
 #          "memory"
 #          "cpu"
 #          "network"
