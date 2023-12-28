@@ -6,12 +6,8 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-23.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
+  outputs = { self, nixpkgs, home-manager, hyprland, ... } @inputs:
   let 
     system = "x86_64-linux";
     pkgs = import nixpkgs {
