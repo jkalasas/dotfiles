@@ -28,6 +28,7 @@
     brightnessctl
     btop
     eza
+    font-manager
     grim
     networkmanagerapplet
     pfetch
