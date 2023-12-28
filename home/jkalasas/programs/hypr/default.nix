@@ -31,7 +31,7 @@ home.packages = with pkgs; [ imagemagick
       ",XF86AudioPlay,exec,playerctl play-pause"
       ",XF86AudioPause,exec,playerctl play-pause"
 
-      "$mod SHIFT, Q, rofi-powermenu"
+      "$mod SHIFT, Q, exec, rofi-powermenu"
       "$mod SHIFT, X, killactive"
       "$mod, mouse_down, workspace, e+1"
       "$mod, mouse_up, workspace, e-1"

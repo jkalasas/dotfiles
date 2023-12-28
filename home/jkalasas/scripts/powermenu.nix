@@ -2,6 +2,7 @@
 let
   rofi-powermenu = pkgs.writeShellScriptBin "rofi-powermenu" ''
     #!/usr/bin/env bash
+    lockfile="~/.cache/lockscreen.png";
     rofi_conf_dir="${config.xdg.configHome}/rofi";
     powermenu_conf="$rofi_conf_dir/powermenu.rasi"
     rofi_command="rofi -theme $powermenu_conf"
@@ -14,7 +15,6 @@ let
     	reboot=""
     	lock=""
     	suspend=""
-    	logout=""
     	ddir="$rofi_conf_dir"
     else
 
@@ -29,7 +29,6 @@ let
     		reboot=""
     		lock=""
     		suspend=""
-    		logout=""
       # Section 2
     #		shutdown="襤"
     #		reboot="ﰇ"
@@ -44,7 +43,6 @@ let
     		reboot=" Restart"
     		lock=" Lock"
     		suspend=" Sleep"
-    		logout=" Logout"
       # Section 2
     #		shutdown="襤Shutdown"
     #		reboot="ﰇ Restart"
@@ -70,7 +68,7 @@ let
     }
 
     # Variable passed to rofi
-    options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+    options="$lock\n$suspend\n$reboot\n$shutdown"
 
     chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
     case $chosen in
@@ -86,7 +84,7 @@ let
             ;;
         $reboot)
     		ans=$(rdialog &)
-    		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+            if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
     			systemctl reboot
     		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
     			exit
@@ -100,20 +98,8 @@ let
         $suspend)
     		ans=$(rdialog &)
     		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-    			mpc -q pause
-    			amixer set Master mute
-    			sh $HOME/.local/bin/lock
+                grim $lockfile; convert $lockfile -blur 0x4 $lockfile; swaylock --image $lockfile
     			systemctl suspend
-    		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-    			exit
-            else
-    			show_msg
-            fi
-            ;;
-        $logout)
-    		ans=$(rdialog &)
-    		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-    			bspc quit
     		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
     			exit
             else
