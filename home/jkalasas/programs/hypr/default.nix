@@ -4,9 +4,7 @@
   imports = [
     ./hyprland-environment.nix
   ];
-
-  home.packages = with pkgs; [
-    imagemagick
+home.packages = with pkgs; [ imagemagick
     swayidle
   ];
 
@@ -90,7 +88,7 @@
     ];
 
     exec = [
-      "wallpaper-set"
+      "sleep 5; wallpaper-set"
     ];
 
     input.kb_layout = "us";
