@@ -1,6 +1,5 @@
 { config, lib, pkgs, ... }:
-{
-  programs.neovim = 
+{ programs.neovim = 
   let
     getFile = file: "${builtins.readFile file}";
   in
@@ -87,7 +86,7 @@
        {
          plugin = nvim-tree-lua;
          type = "lua";
-         config = "require(\"nvim-tree\").setup()";
+         config = getFile ./config/plugins/nvim-tree.lua;
        }
 
 	   {
