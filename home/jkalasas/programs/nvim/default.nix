@@ -29,6 +29,11 @@
 
      plugins = with pkgs.vimPlugins; [
        {
+         plugin = bufferline-nvim;
+         type = "lua";
+         config = "require(\"bufferline\").setup{}";
+       }
+       {
          plugin = catppuccin-nvim;
          type = "lua";
          config = getFile ./config/plugins/catppuccin.lua;
@@ -36,7 +41,7 @@
 	   {
 	     plugin = comment-nvim;
 		 type = "lua";
-		 config = "require(\"Comment\").setup()";
+		 config = "require(\"Comment\").setup{}";
 	   }
 
        cmp_luasnip
@@ -54,7 +59,19 @@
          config = getFile ./config/plugins/lsp.lua;
        }
 
+       {
+         plugin = lualine-nvim;
+         type = "lua";
+         config = "require('lualine').setup()";
+       }
+
        neodev-nvim
+
+       {
+         plugin = nvim-tree-lua;
+         type = "lua";
+         config = "require(\"nvim-tree\").setup()";
+       }
 
 	   {
 	     plugin = telescope-nvim;
