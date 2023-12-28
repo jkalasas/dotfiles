@@ -4,15 +4,16 @@
     ./virtualization
   ];
 
-  programs.regreet.enable = true;
-  services.greetd.enable = true;
-  services.xserver.displayManager.session = [
-    {
-      manage = "desktop";
-      name = "Hyprland";
-      start = "/etc/profiles/per-user/jkalasas/bin/Hyprland";
-    }
-  ];
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "/etc/profiles/per-user/jkalasas/bin/Hyprland";
+        user = "jkalasas";
+      };
+      default_session = initial_session;
+    };
+  };
 
   programs.dconf.enable = true;
 
