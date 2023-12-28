@@ -1,10 +1,14 @@
 { config, pkgs, lib, ... }:
 {
+  home.file."${config.xdg.configHome}/alacritty/catppuccin_macchiato.toml" = {
+    source = ./catppuccin_macchiato.toml;
+  };
+
   programs.alacritty = {
     enable = true;
     settings = {
       import = [
-        pkgs.alacritty-theme.catppuccin_macchiato
+        "${config.xdg.configHome}/alacritty/catppuccin_macchiato.toml"
       ];
 
       font = {
