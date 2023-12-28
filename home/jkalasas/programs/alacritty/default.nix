@@ -13,8 +13,8 @@
 
       font = {
         normal = {
-	  family = "Hack";
-	  style = "Medium";
+	  family = "JetBrainsMono Nerd Font Mono";
+	  style = "Regular";
 	};
 	size = 10;
       };
@@ -24,10 +24,6 @@
 	  x = 12;
 	  y = 12;
 	};
-      };
-
-      shell = {
-        program = "/usr/bin/env zsh";
       };
     };
   };
