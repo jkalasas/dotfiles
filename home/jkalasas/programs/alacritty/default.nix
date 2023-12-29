@@ -13,17 +13,18 @@
 
       font = {
         normal = {
-	  family = "JetBrainsMono Nerd Font Mono";
-	  style = "Regular";
-	};
-	size = 10;
+          family = "JetBrainsMono Nerd Font Mono";
+          style = "Regular";
+        };
+        size = 10;
       };
 
       window = {
         padding = {
-	  x = 12;
-	  y = 12;
-	};
+          x = 12;
+          y = 12;
+        };
+        opacity = 0.8;
       };
     };
   };

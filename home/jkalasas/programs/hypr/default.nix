@@ -81,6 +81,10 @@ home.packages = with pkgs; [ imagemagick
       "$mod, mouse:273, resizewindow"
     ];
 
+    decoration = {
+      rounding = 5;
+    };
+
     exec-once = [
       "nm-applet"
       "swww init"
