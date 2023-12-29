@@ -39,7 +39,7 @@ prompt {
 
 textbox-prompt-colon {
     expand: 			            false;
-    str: 			                "";
+    str: 			                "";
     border-radius:                  100%;
     background-color:               @BG;
     text-color:                     @FG;
@@ -84,7 +84,7 @@ case-indicator {
 listview {
     background-color:               @BG;
     columns:                        1;
-    lines:							5;
+    lines:							4;
     spacing:                        4px;
     cycle:                          true;
     dynamic:                        true;
