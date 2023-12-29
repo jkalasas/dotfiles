@@ -15,6 +15,21 @@
     };
   };
 
+  services.auto-cpufreq = {
+    enable = true;
+    settings = {
+      battery = {
+        governor = "balance";
+        turbo = "auto";
+      };
+
+      charger = {
+        governor = "performance";
+        turbo = "auto";
+      };
+    };
+  };
+
   programs.dconf.enable = true;
 
   security.pam.services.swaylock = {
