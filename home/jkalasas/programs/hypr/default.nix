@@ -24,7 +24,7 @@
     bind = [
       ",Print,exec,screenshot"
       ",XF86AudioMicMute,exec,pamixer --default-source -t"
-      ",XF86MonBrightnessDown,exec,brightnessctl s -10%"
+      ",XF86MonBrightnessDown,exec,brightnessctl s 10%-"
       ",XF86MonBrightnessUp,exec,brightnessctl s +10%"
       ",XF86AudioMute,exec,pamixer -t"
       ",XF86AudioLowerVolume,exec,pamixer -d 10"

@@ -152,7 +152,7 @@
         format = "{icon} {percent}%";
         format-icons = [ "" "" ];
         on-scroll-up = "brightnessctl s +1%";
-        on-scroll-down = "brightnessctl s -1%";
+        on-scroll-down = "brightnessctl s 1%-";
       };
       battery = {
         interval = 60;
