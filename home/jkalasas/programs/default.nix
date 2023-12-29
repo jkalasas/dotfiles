@@ -9,6 +9,7 @@
     ./thunar
     ./tmux
     ./waybar
+    ./zathura
     ./zsh
   ];
 }
