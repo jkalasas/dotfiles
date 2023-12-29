@@ -1,13 +1,13 @@
 { config, lib, pkgs, ... }:
 let
-  start-recorder = pkgs.writeShellScriptBtn "start-recorder" ''
+  start-recorder = pkgs.writeShellScriptBin "start-recorder" ''
     rasi_config="$HOME/.config/rofi/screenshot.rasi"
     rofi_command="rofi -theme $rasi_config"
 
     time=`date +%Y-%m-%d-%I-%M-%S`
     dir="`xdg-user-dir VIDEOS`/Recorded"
-    filename="Recorded_''${time}.mp4"
-    full-path="''${dir}/''${filename}"
+    file="Record_''${time}.mp4"
+    full_path="''${dir}/$file"
 
     pid=799
 
@@ -45,7 +45,7 @@ let
     # take shots
     shotnow () {
       sleep 1
-      wf-recorder -c libx264rgb -f $full-path
+      wf-recorder -c libx264rgb -f $full_path
       notify_view
     }
 
@@ -60,7 +60,7 @@ let
     }
 
     shotarea () {
-      wf-recorder -g "$(slurp)" -c libx264rgb -f $full-path
+      wf-recorder -g "$(slurp)" -c libx264rgb -f $full_path
       notify_view
     }
 
