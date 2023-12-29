@@ -21,6 +21,7 @@ in
 {
   imports = [ 
     ./powermenu.nix
+    ./recorder.nix
     ./screenshot.nix 
   ];
 
