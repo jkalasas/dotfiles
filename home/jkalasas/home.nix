@@ -38,13 +38,11 @@
     grimblast
     networkmanagerapplet
     pfetch
-    slurp
     tty-clock
     unrar
     unzip
     tokyo-night-gtk
     wl-clipboard
-    xfce.thunar
   ]) ++ (with pkgs.gnome; [
     file-roller
     zenity

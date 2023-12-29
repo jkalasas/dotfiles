@@ -6,6 +6,7 @@
     ./nvim
     ./rofi
     ./swaylock
+    ./thunar
     ./tmux
     ./waybar
     ./zsh
