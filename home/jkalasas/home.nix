@@ -1,4 +1,5 @@
-{ configs, hyprland, pkgs, ... }: {
+{ configs, hyprland, pkgs, ... }:
+{
   imports = [
     hyprland.homeManagerModules.default
     ./programs
@@ -18,6 +19,7 @@
     nodejs_21
     python3
     python311Packages.pip
+    openssl
 
     # user
     discord
@@ -33,6 +35,7 @@
     eza
     font-manager
     grim
+    grimblast
     networkmanagerapplet
     pfetch
     slurp
@@ -57,6 +60,12 @@
     "org/gnome/shell/extensions/user-theme" = {
       name = "Catppuccin-Macchiato-Compact-Lavender-Dark";
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.home-manager.enable = true;
