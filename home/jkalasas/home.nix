@@ -21,6 +21,7 @@
 
     # user
     discord
+    mpv
     telegram-desktop
     yt-dlp
 
