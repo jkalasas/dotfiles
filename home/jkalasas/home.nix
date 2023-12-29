@@ -33,6 +33,7 @@
     brightnessctl
     btop
     eza
+    ffmpeg
     font-manager
     grim
     grimblast
