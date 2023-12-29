@@ -4,7 +4,8 @@
   imports = [
     ./hyprland-environment.nix
   ];
-home.packages = with pkgs; [ imagemagick
+  home.packages = with pkgs; [
+    imagemagick
     swayidle
   ];
 
@@ -116,6 +117,8 @@ home.packages = with pkgs; [ imagemagick
     windowrule = [
       "float,^(pavucontrol)"
       "center,^(pavucontrol)"
+      "float,^(mpv)"
+      "center,^(mpv)"
     ];
   };
 }
