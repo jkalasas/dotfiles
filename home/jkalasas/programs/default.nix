@@ -2,6 +2,7 @@
 {
   imports = [
     ./alacritty
+    ./cava
     ./dunst
     ./hypr
     ./nvim
