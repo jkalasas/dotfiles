@@ -1,3 +1,4 @@
+{ ... }:
 {
   imports = [
     ./alacritty
@@ -12,4 +13,12 @@
     ./zathura
     ./zsh
   ];
+
+  home.xdg.mimeApps = rec {
+    enable = true;
+    associations.added = {
+      "video/mp4" = ["mpv.desktop"];
+      "video/x-matroska" = ["mpv.desktop"];
+    };
+  };
 }
