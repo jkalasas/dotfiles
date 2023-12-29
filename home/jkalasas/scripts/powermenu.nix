@@ -93,12 +93,13 @@ let
             fi
             ;;
         $lock)
-            grim $lockfile; convert $lockfile -blur 0x4 $lockfile; swaylock --image $lockfile &
+            (grim $lockfile; convert $lockfile -blur 0x4 $lockfile; swaylock --image $lockfile) &
             ;;
         $suspend)
     		ans=$(rdialog &)
     		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-                grim $lockfile; convert $lockfile -blur 0x4 $lockfile; swaylock --image $lockfile &
+                (grim $lockfile; convert $lockfile -blur 0x4 $lockfile; swaylock --image $lockfile) &
+                sleep 1
     			systemctl suspend
     		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
     			exit
