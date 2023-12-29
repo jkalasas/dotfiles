@@ -20,7 +20,9 @@
     python311Packages.pip
 
     # user
+    discord
     telegram-desktop
+    yt-dlp
 
     # misc
     archiver
