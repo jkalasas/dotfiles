@@ -15,11 +15,12 @@
     ./zsh
   ];
 
-  home.xdg.mimeApps = rec {
+  xdg.mimeApps = rec {
     enable = true;
     associations.added = {
-      "video/mp4" = ["mpv.desktop"];
-      "video/x-matroska" = ["mpv.desktop"];
+      "video/mp4" = [ "mpv.desktop" ];
+      "video/x-matroska" = [ "mpv.desktop" ];
     };
+    defaultApplications = associations.added;
   };
 }
