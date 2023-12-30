@@ -24,6 +24,7 @@
     # user
     discord
     mpv
+    onlyoffice-bin
     telegram-desktop
     yt-dlp
 
