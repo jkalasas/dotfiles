@@ -6,6 +6,8 @@
     enable = true;
 
     extraConfig = ''
+      set selection-clipboard clipboard
+
       include catppuccin-macchiato
     '';
   };
