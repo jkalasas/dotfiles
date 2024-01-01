@@ -6,6 +6,7 @@
     ./dunst
     ./hypr
     ./nvim
+    ./mpd
     ./rofi
     ./swaylock
     ./thunar
