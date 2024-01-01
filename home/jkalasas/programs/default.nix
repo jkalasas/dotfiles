@@ -3,7 +3,6 @@
   imports = [
     ./alacritty
     ./cava
-    ./discord
     ./dunst
     ./hypr
     ./nvim

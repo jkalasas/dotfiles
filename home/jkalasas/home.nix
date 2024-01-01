@@ -1,4 +1,14 @@
 { configs, hyprland, pkgs, ... }:
+let
+  webcord-vencord-wayland = pkgs.symlinkJoin {
+    name = "webcord-vencord";
+    paths = [ pkgs.webcord-vencord ];
+    buildInputs = [ pkgs.makeWrapper ];
+    postBuild = ''
+      wrapProgram $out/bin/webcord --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
+    '';
+  };
+in
 {
   imports = [
     hyprland.homeManagerModules.default
@@ -6,6 +16,7 @@
     ./scripts
     ./themes
   ];
+
 
   home = {
     username = "jkalasas";
@@ -25,6 +36,7 @@
     mpv
     onlyoffice-bin
     telegram-desktop
+    webcord-vencord-wayland
     yt-dlp
 
     # misc
@@ -44,6 +56,7 @@
     unzip
     tokyo-night-gtk
     wl-clipboard
+    xwaylandvideobridge
   ]) ++ (with pkgs.gnome; [
     file-roller
     zenity

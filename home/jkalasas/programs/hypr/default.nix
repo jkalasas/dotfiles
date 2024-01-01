@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     imagemagick
     swayidle
+    xwaylandvideobridge
   ];
 
   wayland.windowManager.hyprland = {
@@ -119,6 +120,13 @@
       "center,^(pavucontrol)"
       "float,^(mpv)"
       "center,^(mpv)"
+    ];
+
+    windowrulev2 = [
+      "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
+      "noanim,class:^(xwaylandvideobridge)$"
+      "nofocus,class:^(xwaylandvideobridge)$"
+      "noinitialfocus,class:^(xwaylandvideobridge)$"
     ];
   };
 }
