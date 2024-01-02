@@ -1,17 +1,29 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 let
+  appicon = "${config.xdg.configHome}/personal-appicons/obsidian-icon.ico";
   version = "1.5.3";
-  hash = "08dhwahgjvz4am34bn2vq6xb3rfj78rilvqyszynsxjjqvfk72q7";
+  hash = "sha256-B4sz3cZSdm391x5vGjM60uWxusFb2EVGVeRv+aDisCE=";
   obsidian-appimage = pkgs.appimageTools.wrapType2 {
     name = "obsidian";
-    src = fetchurl {
+    src = pkgs.fetchurl {
       url = "https://github.com/obsidianmd/obsidian-releases/releases/download/v${version}/Obsidian-${version}.AppImage";
       hash = hash;
     };
+  };
+  obsidian-desktop-item = pkgs.makeDesktopItem {
+    name = "obsidian";
+    desktopName = "Obsidian";
+    icon = appicon;
+    exec = "obsidian";
+    terminal = false;
   };
 in
 {
   home.packages = [
     obsidian-appimage
+    obsidian-desktop-item
   ];
+
+  # desktop entry
+  home.file."${appicon}".source = ./obsidian-icon.ico;
 }
