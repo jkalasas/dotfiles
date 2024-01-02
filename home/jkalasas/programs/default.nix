@@ -7,6 +7,7 @@
     ./hypr
     ./nvim
     ./mpd
+    ./obsidian
     ./rofi
     ./swaylock
     ./thunar

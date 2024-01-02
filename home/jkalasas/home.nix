@@ -17,7 +17,6 @@ in
     ./themes
   ];
 
-
   home = {
     username = "jkalasas";
     homeDirectory = "/home/jkalasas";

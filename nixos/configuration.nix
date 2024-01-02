@@ -2,7 +2,7 @@
 
 {
   imports =
-    [      
+    [
       ./hardware-configuration.nix
       ../hosts/desktop
     ];
@@ -15,7 +15,6 @@
 
   time.timeZone = "Asia/Manila";
   i18n.defaultLocale = "en_PH.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "fil_PH";
     LC_IDENTIFICATION = "fil_PH";
@@ -39,14 +38,13 @@
     isNormalUser = true;
     description = "Kyle";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
     shell = pkgs.zsh;
   };
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
-    # browsers
+  environment.systemPackages = with pkgs; [ # browsers
     firefox
 
     #editors
@@ -99,7 +97,8 @@
   ];
 
   networking.nameservers = [
-    "1.1.1.1" "1.0.0.1"
+    "1.1.1.1"
+    "1.0.0.1"
   ];
 
   fileSystems."/run/media/Linuxuu" = {
