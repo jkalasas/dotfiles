@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  appicon = "${config.xdg.configHome}/personal-appicons/obsidian-icon.ico";
+  appicon = "${config.xdg.configHome}/personal-appicons/obsidian-icon.svg";
   version = "1.5.3";
   hash = "sha256-B4sz3cZSdm391x5vGjM60uWxusFb2EVGVeRv+aDisCE=";
   obsidian-appimage = pkgs.appimageTools.wrapType2 {
@@ -24,6 +24,6 @@ in
     obsidian-desktop-item
   ];
 
-  # desktop entry
-  home.file."${appicon}".source = ./obsidian-icon.ico;
+  # desktop entry icon
+  home.file."${appicon}".source = ./obsidian-icon.svg;
 }
