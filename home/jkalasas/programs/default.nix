@@ -7,7 +7,6 @@
     ./hypr
     ./nvim
     ./mpd
-    ./moosync
     ./obsidian
     ./rofi
     ./swaylock

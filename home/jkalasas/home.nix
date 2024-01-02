@@ -34,6 +34,7 @@ in
     # user
     mpv
     onlyoffice-bin
+    spotdl
     telegram-desktop
     webcord-vencord-wayland
     yt-dlp

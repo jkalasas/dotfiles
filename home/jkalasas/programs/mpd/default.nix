@@ -7,6 +7,7 @@
   services.mpd = {
     enable = true;
     musicDirectory = "/run/media/Linuxuu/Music";
+    playlistDirectory = "/run/media/Linuxuu/Music";
     network.listenAddress = "any";
     extraConfig = ''
       audio_output {
