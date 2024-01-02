@@ -120,6 +120,8 @@
       "center,^(pavucontrol)"
       "float,^(mpv)"
       "center,^(mpv)"
+      "float,^(ymuse)"
+      "center,^(ymuse)"
     ];
 
     windowrulev2 = [
