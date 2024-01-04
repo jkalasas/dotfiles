@@ -32,6 +32,7 @@ in
     openssl
 
     # user
+    libresprite
     mpv
     onlyoffice-bin
     spotdl
