@@ -30,8 +30,10 @@ in
     python3
     python311Packages.pip
     openssl
+    rustup
 
     # user
+    gimp-with-plugins
     libresprite
     mpv
     onlyoffice-bin

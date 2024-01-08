@@ -33,6 +33,7 @@ require("neodev").setup()
 local providers = {
 	"emmet_ls",
 	"pyright",
+	"rust_analyzer",
 	"tailwindcss",
 	"tsserver",
 }

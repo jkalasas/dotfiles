@@ -5,6 +5,7 @@ null_ls.setup({
 		-- formatters
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.prettierd,
+		null_ls.builtins.formatting.rustfmt,
 		null_ls.builtins.formatting.stylua,
 
 		-- linters

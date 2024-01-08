@@ -20,6 +20,7 @@
         nodePackages.typescript-language-server
         lua-language-server
         luajitPackages.lua-lsp
+        rustup
         tailwindcss-language-server
 
         # formatters
