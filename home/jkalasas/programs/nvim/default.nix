@@ -22,6 +22,7 @@
         luajitPackages.lua-lsp
         rustup
         tailwindcss-language-server
+        taplo # toml
 
         # formatters
         black

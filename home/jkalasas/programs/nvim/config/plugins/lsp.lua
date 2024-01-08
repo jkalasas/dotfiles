@@ -35,6 +35,7 @@ local providers = {
 	"pyright",
 	"rust_analyzer",
 	"tailwindcss",
+	"taplo",
 	"tsserver",
 }
 
