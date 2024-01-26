@@ -31,6 +31,7 @@ in
     nodejs_21
     nodePackages.live-server
     mysql-shell
+    poetry
     python3
     python311Packages.pip
     openssl
