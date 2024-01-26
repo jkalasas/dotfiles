@@ -14,8 +14,13 @@ let
     name = "obsidian";
     desktopName = "Obsidian";
     icon = appicon;
-    exec = "obsidian";
+    exec = "obsidian %U";
     terminal = false;
+    type = "Application";
+    comment = "Obsidian";
+    startupWMClass = "obsidian";
+    mimeTypes = ["x-scheme-handler/obsidian"];
+    categories = [ "Office" ];
   };
 in
 {
