@@ -25,8 +25,12 @@ in
   home.packages = (with pkgs; [
     # dev stuff
     corepack_21
+    gnumake
     lazygit
+    nasm
     nodejs_21
+    nodePackages.live-server
+    mysql-shell
     python3
     python311Packages.pip
     openssl
