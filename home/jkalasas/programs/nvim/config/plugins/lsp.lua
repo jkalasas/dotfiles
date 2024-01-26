@@ -26,17 +26,21 @@ local on_attach = function(_, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 require("neodev").setup()
 
 local providers = {
+	"asm_lsp",
+	"cssls",
 	"emmet_ls",
 	"pyright",
 	"rust_analyzer",
 	"tailwindcss",
 	"taplo",
 	"tsserver",
+	"svelte",
 }
 
 for _, provider in ipairs(providers) do

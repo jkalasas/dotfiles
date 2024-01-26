@@ -13,6 +13,7 @@
 
       extraPackages = with pkgs; [
         # language servers
+        asm-lsp
         emmet-ls
         nodePackages.pyright
         typescript
@@ -23,6 +24,7 @@
         rustup
         tailwindcss-language-server
         taplo # toml
+        vscode-langservers-extracted
 
         # formatters
         black
@@ -110,7 +112,11 @@
             p.tree-sitter-markdown
             p.tree-sitter-markdown-inline
             p.tree-sitter-python
+            p.tree-sitter-javascript
+            p.tree-sitter-typescript
             p.tree-sitter-json
+            p.tree-sitter-svelte
+            p.tree-sitter-rust
           ]));
           type = "lua";
           config = getFile ./config/plugins/treesitter.lua;
