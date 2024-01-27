@@ -88,6 +88,7 @@
     };
 
     exec-once = [
+      "blueman-applet"
       "nm-applet"
       "swww init"
       "swayidle -w timeout 1200 \"$lockcommand\" timeout 1800 \"hyprctl dispatch dpms off\" resume \"hyprctl dispatch dpms on\""

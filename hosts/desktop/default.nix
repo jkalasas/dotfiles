@@ -11,6 +11,7 @@
       Experimental = true;
     };
   };
+  services.blueman.enable = true;
 
   services.greetd = {
     enable = true;
