@@ -12,7 +12,6 @@
     ./swaylock
     ./thunar
     ./tmux
-    ./vscode
     ./waybar
     ./zathura
     ./zsh
