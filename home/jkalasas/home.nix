@@ -26,14 +26,13 @@ in
     # dev stuff
     corepack_21
     gnumake
+    jupyter
     lazygit
     nasm
     nodejs_21
     nodePackages.live-server
     mysql-shell
     poetry
-    python3
-    python311Packages.pip
     openssl
     rustup
 
@@ -70,6 +69,9 @@ in
     zenity
     gnome-tweaks
     eog
+  ]) ++ (with pkgs.python311Packages; [
+    # python packages
+    pip
   ]);
 
   dconf.settings = {
