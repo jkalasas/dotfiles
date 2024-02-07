@@ -116,6 +116,10 @@
       workspace_swipe_fingers = 4;
     };
 
+    misc = {
+      disable_hyprland_logo = true;
+    };
+
     windowrule = [
       "float,^(pavucontrol)"
       "center,^(pavucontrol)"
