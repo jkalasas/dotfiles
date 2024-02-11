@@ -71,6 +71,7 @@ in
     zenity
     gnome-tweaks
     eog
+    pomodoro
   ]);
 
   dconf.settings = {

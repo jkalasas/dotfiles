@@ -127,6 +127,9 @@
       "center,^(mpv)"
       "float,^(ymuse)"
       "center,^(ymuse)"
+      "float,^(gnome-pomodoro)"
+      "size 507 641,^(gnome-pomodoro)"
+      "center,^(gnome-pomodoro)"
     ];
 
     windowrulev2 = [
