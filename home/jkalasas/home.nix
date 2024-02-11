@@ -45,6 +45,8 @@ in
     telegram-desktop
     webcord-vencord-wayland
     yt-dlp
+    wineWowPackages.stable
+    winetricks
 
     # misc
     archiver
