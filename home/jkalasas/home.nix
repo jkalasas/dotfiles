@@ -56,6 +56,7 @@ in
     eza
     ffmpeg
     font-manager
+    fzf
     grim
     grimblast
     networkmanagerapplet
