@@ -38,6 +38,7 @@ in
     rustup
 
     # user
+    chromium
     gimp-with-plugins
     libresprite
     mpv
