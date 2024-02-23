@@ -15,8 +15,9 @@
         # language servers
         asm-lsp
         emmet-ls
-        nodePackages.pyright
         typescript
+        nodePackages.intelephense
+        nodePackages.pyright
         nodePackages.svelte-language-server
         nodePackages.typescript-language-server
         lua-language-server

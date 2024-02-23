@@ -36,6 +36,7 @@ local providers = {
 	"asm_lsp",
 	"cssls",
 	"emmet_ls",
+	"intelephense",
 	"pyright",
 	"rust_analyzer",
 	"tailwindcss",
