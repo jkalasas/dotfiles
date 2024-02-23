@@ -32,6 +32,7 @@ in
     nodePackages.live-server
     mysql-shell
     php
+    phpPackages.composer
     poetry
     python3
     openssl
