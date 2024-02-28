@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 {
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -11,6 +16,7 @@
       plugins = [ "direnv" "git" ];
       theme = "refined";
     };
+
     plugins = [
       {
         name = "zsh-nix-shell";
@@ -23,5 +29,9 @@
         };
       }
     ];
+
+    shellAliases = {
+      cd = "z";
+    };
   };
 }
