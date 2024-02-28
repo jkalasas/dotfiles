@@ -42,6 +42,7 @@ in
     chromium
     gimp-with-plugins
     libresprite
+    motrix
     mpv
     onlyoffice-bin
     spotdl
