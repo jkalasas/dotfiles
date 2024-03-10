@@ -72,6 +72,7 @@ local M = {
 		["<leader>fa"] = "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>",
 		["<leader>fw"] = "<cmd> Telescope live_grep <CR>",
 		["<leader>fb"] = "<cmd> Telescope buffers <CR>",
+		["<leader>mf"] = "<cmd> Telescope media_files <CR>",
 	},
 
 	v = {

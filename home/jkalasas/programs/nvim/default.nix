@@ -35,6 +35,11 @@
         # linters
         eslint_d
 
+        # telescope media support
+        chafa
+        imagemagick
+        ffmpegthumbnailer
+
         rnix-lsp
 
         fd
@@ -102,7 +107,9 @@
           type = "lua";
           config = getFile ./config/plugins/telescope.lua;
         }
+
         telescope-fzf-native-nvim
+        telescope-media-files-nvim
 
         {
           plugin = (nvim-treesitter.withPlugins (p: [
