@@ -6,6 +6,9 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.rustfmt,
+		null_ls.builtins.formatting.sqlfluff.with({
+			extra_args = { "--dialect", "mysql" },
+		}),
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.taplo,
 

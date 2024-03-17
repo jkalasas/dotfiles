@@ -30,6 +30,7 @@
         # formatters
         black
         prettierd
+        sqlfluff
         stylua
 
         # linters
