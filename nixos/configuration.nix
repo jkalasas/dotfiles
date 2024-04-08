@@ -96,6 +96,8 @@
     intel-media-driver
   ];
 
+  hardware.opengl.driSupport32Bit = true;
+
   networking.nameservers = [
     "1.1.1.1"
     "1.0.0.1"
