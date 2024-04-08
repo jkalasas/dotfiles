@@ -4,5 +4,6 @@
     thunar
     thunar-archive-plugin
     thunar-volman
+    xfconf
   ];
 }
