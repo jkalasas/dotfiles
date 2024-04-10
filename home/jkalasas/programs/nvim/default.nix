@@ -34,6 +34,7 @@
         stylua
 
         # linters
+        djlint
         eslint_d
 
         # telescope media support
