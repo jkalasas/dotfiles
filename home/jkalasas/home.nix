@@ -39,11 +39,18 @@ in
     rustup
 
     # user
+    audacity
+    bottles
+    cabextract
+    ciscoPacketTracer8
     chromium
     gimp-with-plugins
     libresprite
     motrix
     mpv
+    playonlinux
+    obs-studio
+    obs-studio-plugins.wlrobs
     onlyoffice-bin
     spotdl
     telegram-desktop
