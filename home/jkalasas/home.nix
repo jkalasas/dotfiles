@@ -44,7 +44,10 @@ in
     cabextract
     ciscoPacketTracer8
     chromium
+    corefonts
     gimp-with-plugins
+    ghostscript
+    libreoffice
     libresprite
     motrix
     mpv
@@ -52,10 +55,13 @@ in
     obs-studio
     obs-studio-plugins.wlrobs
     onlyoffice-bin
+    ruby
+    samba
     spotdl
     telegram-desktop
     webcord-vencord-wayland
     yt-dlp
+    vistafonts
     wineWowPackages.stable
     winetricks
 
