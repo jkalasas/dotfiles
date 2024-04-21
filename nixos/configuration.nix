@@ -44,7 +44,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [ # browsers
+  environment.systemPackages = with pkgs; [
+    # browsers
     firefox
 
     #editors
@@ -98,6 +99,9 @@
 
   hardware.opengl.driSupport32Bit = true;
 
+  networking.firewall.allowedTCPPorts = [
+    10300
+  ];
   networking.nameservers = [
     "1.1.1.1"
     "1.0.0.1"
